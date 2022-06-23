@@ -1,8 +1,8 @@
 import Head from "next/head";
 import cx from "clsx";
 
-import { Reveal } from "../components/reveal";
 import { Layout } from "../components/layout";
+import { Reveal } from "../components/reveal";
 
 export default function NestedDemo() {
   return (

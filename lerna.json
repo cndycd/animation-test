@@ -1,4 +1,4 @@
 {
-  "packages": ["framer-motion", "react-spring"],
+  "packages": ["framer-motion", "react-spring", "vanilla-css"],
   "version": "0.1.0"
 }
