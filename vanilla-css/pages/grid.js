@@ -24,7 +24,7 @@ export default function GridDemo() {
   );
 }
 
-const elements = Array.from(Array(52).keys());
+const elements = Array.from(Array(104).keys());
 const colors = [
   "from-red-400 to-red-600",
   "from-blue-400 to-blue-600",

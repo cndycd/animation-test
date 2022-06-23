@@ -10,7 +10,7 @@ export const Reveal = ({ className = "", children, ...rest }) => {
   });
 
   const styles = useSpring({
-    y: inView ? 0 : 200,
+    transform: `translate3d(0, ${inView ? 0 : 200}px, 0)`,
     opacity: inView ? 1 : 0,
     config: {
       mass: 1,

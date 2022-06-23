@@ -16,9 +16,6 @@ export default function StandardDemo() {
               )}
             >
               <div className="text-9xl">{element}</div>
-              <div className="absolute right-0 bottom-0">
-                <div className="p-4 text-5xl">Extra</div>
-              </div>
             </div>
           </Reveal>
         ))}

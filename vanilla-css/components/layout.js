@@ -1,7 +1,14 @@
 import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export const Layout = ({ version, children }) => {
+  const router = useRouter();
+
+  const handleReload = () => {
+    router.reload(window.location.pathname);
+  };
+
   return (
     <>
       <Head>
@@ -21,6 +28,17 @@ export const Layout = ({ version, children }) => {
         </div>
       </div>
       {children}
+      <div className="fixed right-0 bottom-0 space-x-4 p-4">
+        <button onClick={handleScrollToTop}>top</button>
+        <button onClick={handleReload}>refresh</button>
+      </div>
     </>
   );
+};
+
+const handleScrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 };
