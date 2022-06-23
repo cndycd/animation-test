@@ -1,8 +1,7 @@
-import cx from "clsx";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 
-export const Reveal = ({ className = "", children, ...rest }) => {
+export const Reveal = ({ children, ...rest }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -21,12 +20,7 @@ export const Reveal = ({ className = "", children, ...rest }) => {
   });
 
   return (
-    <animated.div
-      ref={ref}
-      className={cx("will-change-[transform,opacity]", className)}
-      style={styles}
-      {...rest}
-    >
+    <animated.div ref={ref} style={styles} {...rest}>
       {children}
     </animated.div>
   );
