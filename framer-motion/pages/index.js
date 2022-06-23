@@ -17,11 +17,14 @@ export default function Home() {
           <Reveal key={element}>
             <div
               className={cx(
-                "flex aspect-video w-full items-center justify-center text-9xl  font-bold text-white",
+                "relative flex aspect-video w-full items-center justify-center  font-bold text-white",
                 colors[element % 4]
               )}
             >
-              <Reveal>{element}</Reveal>
+              <Reveal className="text-9xl">{element}</Reveal>
+              <div className="absolute right-0 bottom-0">
+                <Reveal className="p-4 text-5xl">Extra</Reveal>
+              </div>
             </div>
           </Reveal>
         ))}
