@@ -1,11 +1,12 @@
+import Head from "next/head";
 import cx from "clsx";
 
-import { Layout } from "../components/layout";
 import { Reveal } from "../components/reveal";
+import { Layout } from "../components/layout";
 
-export default function StandardDemo() {
+export default function NestedDemo() {
   return (
-    <Layout version="standard">
+    <Layout version="nested">
       <div className="mx-auto my-16 flex max-w-5xl flex-col space-y-16">
         {elements.map((element) => (
           <Reveal key={element}>
@@ -15,9 +16,9 @@ export default function StandardDemo() {
                 colors[element % 4]
               )}
             >
-              <div className="text-9xl">{element}</div>
+              <Reveal className="text-9xl">{element}</Reveal>
               <div className="absolute right-0 bottom-0">
-                <div className="p-4 text-5xl">Extra</div>
+                <Reveal className="p-4 text-5xl">Extra</Reveal>
               </div>
             </div>
           </Reveal>

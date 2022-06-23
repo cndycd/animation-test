@@ -3,22 +3,19 @@ import cx from "clsx";
 import { Layout } from "../components/layout";
 import { Reveal } from "../components/reveal";
 
-export default function StandardDemo() {
+export default function GridDemo() {
   return (
-    <Layout version="standard">
-      <div className="mx-auto my-16 flex max-w-5xl flex-col space-y-16">
+    <Layout version="grid">
+      <div className="mx-auto my-16 grid max-w-6xl grid-cols-4 gap-8">
         {elements.map((element) => (
           <Reveal key={element}>
             <div
               className={cx(
-                "relative flex aspect-video w-full items-center justify-center  bg-gradient-to-b font-bold text-white",
+                "relative flex aspect-video w-full items-center justify-center bg-gradient-to-b font-bold text-white",
                 colors[element % 4]
               )}
             >
-              <div className="text-9xl">{element}</div>
-              <div className="absolute right-0 bottom-0">
-                <div className="p-4 text-5xl">Extra</div>
-              </div>
+              <div className="text-3xl">{element}</div>
             </div>
           </Reveal>
         ))}
