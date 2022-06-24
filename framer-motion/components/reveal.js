@@ -22,11 +22,11 @@ export const Reveal = ({ children, ...rest }) => {
 const variants = {
   hidden: {
     willChange: "transform,opacity",
-    transform: "translate3d(0, 200px, 0)",
+    y: 200,
     opacity: 0,
   },
   visible: {
-    transform: "translate3d(0, 0px, 0)",
+    y: 0,
     opacity: 1,
   },
 };
