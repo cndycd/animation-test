@@ -21,6 +21,7 @@ export const Reveal = ({ children, ...rest }) => {
 
 const variants = {
   hidden: {
+    willChange: "transform,opacity",
     transform: "translate3d(0, 200px, 0)",
     opacity: 0,
   },

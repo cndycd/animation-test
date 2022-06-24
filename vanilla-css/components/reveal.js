@@ -12,7 +12,9 @@ export const Reveal = ({ className = "", children, ...rest }) => {
     <div
       ref={ref}
       className={cx(
-        inView ? "translate-y-0 opacity-100" : "translate-y-[200px] opacity-0",
+        inView
+          ? "translate-y-0 opacity-100"
+          : "translate-y-[200px] opacity-0 will-change-[transform,opacity]",
         "transform-gpu duration-[1500ms] ease-out",
         className
       )}
